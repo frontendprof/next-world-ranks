@@ -15,6 +15,10 @@
 2. SearchInput component
 3. CountriesTable component
 
+### pages
+
+1. Country pages
+
 ### Layout component
 
 1. Transforming index structure
@@ -34,3 +38,8 @@
 3. Implementing countries list in ascending and descending order
 4. Implementing on click handle for asc and desc arrows
 5. Filtering countries by search input wired up on change handler
+
+### Country page
+
+1. Getting specific infos about a country on click
+2. Implementing style with module.css

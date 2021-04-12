@@ -7,12 +7,15 @@ import CountriesTable from "../components/CountriesTable/CountriesTable";
 import styles from '../styles/Home.module.css'
 
 export default function Home({countries}) {
+  console.log(countries);
 
   const [keyword,setKeyword]=useState("")
   
 
   const filteredCountries=countries.filter(con=>(
-    con.name.toLowerCase().includes(keyword)
+    con.name.toLowerCase().includes(keyword) ||
+    con.region.toLowerCase().includes(keyword) ||
+    con.subregion.toLowerCase().includes(keyword)
   ))
 
   const onInputChange=(e)=>{
