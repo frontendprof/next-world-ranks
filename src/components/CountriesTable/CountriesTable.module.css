@@ -17,10 +17,22 @@
     font-weight: 500;
 
     outline:none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .heading_name{
-    text-align:left;
+    justify-content: start;
+}
+
+.heading_arrow{
+    color:var(--primary-color);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left:2px;
 }
 
 .row{

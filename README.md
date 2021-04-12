@@ -31,3 +31,6 @@
 
 1. Destructuring passed props via index
 2. Implementing style via module.css
+3. Implementing countries list in ascending and descending order
+4. Implementing on click handle for asc and desc arrows
+5. Filtering countries by search input wired up on change handler
