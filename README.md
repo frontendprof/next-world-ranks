@@ -1,6 +1,8 @@
 ## next-world-ranks
 
 - npx create-next-app ./
+- npm install @material-ui/core
+- npm install @material-ui/icons
 
 ### Initial setup
 
@@ -10,9 +12,16 @@
 ### Components
 
 1. Layout component
+2. SearchInput component
 
 ### Layout component
 
 1. Transforming index structure
 2. Applying style with module.css file
 3. Importing Logo svg
+
+### SearchInput component
+
+1. Importing icon from material ui icon
+2. Applying style via module.css
+3. Input element with props
