@@ -3,14 +3,15 @@ import Head from "next/head";
 import styles from "./Layout.module.css";
 
 
-const Layout=({children})=>{
+const Layout=({children,title="World Ranks"})=>{
     return(
         <div className={styles.container}>
             <Head>
-            <title>World Ranks</title>
+            <title>{title}</title>
             <link rel="icon" href="/favicon.ico" />
             </Head>
-            <header>
+
+            <header className={styles.header}>
                 <svg 
                     width="175" 
                     height="24" 
@@ -55,7 +56,7 @@ const Layout=({children})=>{
             </main>
     
             <footer className={styles.footer}>
-            footer
+                AbdulMalik. All rights reserved. &copy;2021
             </footer>
         </div>
     )
