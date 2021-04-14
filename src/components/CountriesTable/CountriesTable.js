@@ -68,19 +68,39 @@ const CountriesTable=({countries})=>{
         <div>
             <div className={styles.heading}>
 
+                <div className={styles.heading_flag}></div>
+
                 <button className={styles.heading_name} onClick={()=>setValueAndDirection("name")}>
                     <div>Name</div>
                     
-                    <SortArrow direction={direction}/>
-
+                    {value==="name" && <SortArrow direction={direction}/>}
                 </button>
+
+
 
                 <button className={styles.heading_population} onClick={()=>setValueAndDirection("population")}>
                     <div>Population</div>
 
-                    <SortArrow direction={direction}/>
-
+                    {value==="population" && <SortArrow direction={direction}/>}
                 </button>
+
+
+
+                <button className={styles.heading_area} onClick={()=>setValueAndDirection("area")}>
+                    <div>Area (km<sup style={{ fontSize:".6rem" }}>2</sup>)</div>
+
+                    {value==="area" && <SortArrow direction={direction}/>}
+                </button>
+
+
+
+
+                <button className={styles.heading_gini} onClick={()=>setValueAndDirection("gini")}>
+                    <div>Gini</div>
+
+                    {value==="gini" && <SortArrow direction={direction}/>}
+                </button>
+
 
 
             </div>
@@ -88,8 +108,13 @@ const CountriesTable=({countries})=>{
             {orderedCountries.map(c=>(
                 <Link href={`/country/${c.alpha3Code}`} key={c.name}>
                     <div className={styles.row} >
+                        <div className={styles.flag}>
+                            <img src={c.flag} alt={c.name}/>
+                        </div>
                         <div className={styles.name}>{c.name}</div>
                         <div className={styles.population}>{c.population}</div>
+                        <div className={styles.area}>{c.area || 0}</div>
+                        <div className={styles.gini}>{c.gini ||0}%</div>
                     </div>
                 </Link>
                 

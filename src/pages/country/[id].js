@@ -19,7 +19,6 @@ const getCountry=async(id)=>{
 
 
 const Country = ({country}) => {
-    console.log(country);
     const [borders,setBorders]=useState([])
 
     const getBorders=async()=>{
@@ -30,7 +29,6 @@ const Country = ({country}) => {
     useEffect(()=>{
         getBorders()
     },[])
-    console.log(borders);
 
     return (
         <Layout title={country.name}>

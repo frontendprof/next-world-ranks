@@ -7,8 +7,6 @@ import CountriesTable from "../components/CountriesTable/CountriesTable";
 import styles from '../styles/Home.module.css'
 
 export default function Home({countries}) {
-  console.log(countries);
-
   const [keyword,setKeyword]=useState("")
   
 
@@ -25,10 +23,20 @@ export default function Home({countries}) {
 
   return(
     <Layout>
-      <div className={styles.counts}>Found {countries.length} countries</div>
-      <SearchInput placeholder="Filter by name, region or subregion" onChange={onInputChange}/>
 
+      <div className={styles.inputContainer}>
+
+        <div className={styles.counts}>Found {countries.length} countries</div>
+
+        <div className={styles.searchInput}>
+
+          <SearchInput placeholder="Filter by name, region or subregion" onChange={onInputChange}/>
+        </div>
+
+      </div>
+      
       <CountriesTable countries={filteredCountries}/>
+      
     </Layout>
   )
 }
