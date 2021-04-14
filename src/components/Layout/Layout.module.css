@@ -17,6 +17,10 @@
   margin-bottom:16px
 }
 
+.header:hover{
+  cursor: pointer;
+}
+
 .footer {
   text-align: center;
   font-size:.75rem;
