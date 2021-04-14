@@ -43,3 +43,5 @@
 
 1. Getting specific infos about a country on click
 2. Implementing style with module.css
+3. More details info from params
+4. Neighboring countries rendering logic
