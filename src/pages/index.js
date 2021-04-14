@@ -7,8 +7,6 @@ import CountriesTable from "../components/CountriesTable/CountriesTable";
 import styles from '../styles/Home.module.css'
 
 export default function Home({countries}) {
-  console.log(countries);
-
   const [keyword,setKeyword]=useState("")
   
 

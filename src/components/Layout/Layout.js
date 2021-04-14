@@ -1,9 +1,37 @@
 import Head from "next/head";
 import Link from "next/link";
+import Brightness6RoundedIcon from '@material-ui/icons/Brightness6Rounded';
 import styles from "./Layout.module.css";
+import { useEffect, useState } from "react";
 
 
 const Layout=({children,title="World Ranks"})=>{
+    const [theme,setTheme]=useState("light");
+
+    useEffect(()=>{
+        document.documentElement.setAttribute("data-theme",localStorage.getItem("theme"));
+
+        setTheme(localStorage.getItem("theme"))
+    },[])
+
+    const swtichTheme=()=>{
+        if(theme==="light"){
+            saveTheme("dark")
+        }else{
+            saveTheme("light")
+        }
+    }
+
+    const saveTheme=theme=>{
+        setTheme(theme);
+        localStorage.setItem("theme",theme);
+        document.documentElement.setAttribute("data-theme",theme)
+    }
+
+
+
+
+
     return(
         <div className={styles.container}>
             <Head>
@@ -53,6 +81,10 @@ const Layout=({children,title="World Ranks"})=>{
                     </svg>
             
                 </Link>
+
+                <button className={styles.themeSwitcher} onClick={swtichTheme}>
+                    <Brightness6RoundedIcon />
+                </button>
                     
             </header>
     

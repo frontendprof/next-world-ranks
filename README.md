@@ -24,6 +24,7 @@
 1. Transforming index structure
 2. Applying style with module.css file
 3. Importing Logo svg
+4. Configuring dark/light theme switchers
 
 ### SearchInput component
 
