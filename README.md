@@ -38,6 +38,7 @@
 3. Implementing countries list in ascending and descending order
 4. Implementing on click handle for asc and desc arrows
 5. Filtering countries by search input wired up on change handler
+6. Adding two more columns for area and gini respectively
 
 ### Country page
 

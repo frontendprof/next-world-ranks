@@ -3,3 +3,21 @@
   margin:12px 0;
   color:var(--text-color-secondary);
 }
+
+.inputContainer{
+  margin:20px 0;
+}
+
+@media screen and (min-width:720px){
+  .inputContainer{
+    display: flex;
+    justify-content: space-between;
+  }
+  .counts{
+    flex:1;
+  }
+
+  .searchInput{
+    flex:2;
+  }
+}
